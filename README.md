@@ -1,4 +1,6 @@
 # DonerSearch — Lightweight Web Crawler & Search Engine
+<img width="1820" height="862" alt="resim" src="https://github.com/user-attachments/assets/c36f13c2-660c-467c-ac27-10efbf6ba104" />
+
 
 A clean, dependency-free Python project that crawls web pages, indexes them into a SQLite database, and provides a search interface (CLI & Web) using BM25 ranking.
 
