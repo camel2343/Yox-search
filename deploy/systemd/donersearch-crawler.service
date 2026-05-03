@@ -1,0 +1,17 @@
+[Unit]
+Description=DonerSearch Crawler
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/opt/doner
+ExecStart=/usr/bin/python3 -m donersearch --db /opt/doner/donersearch.db \
+  crawl example.com --preset default --daily --allowed-domains example.com \
+  --workers 4
+Restart=always
+RestartSec=5
+User=www-data
+
+[Install]
+WantedBy=multi-user.target
+

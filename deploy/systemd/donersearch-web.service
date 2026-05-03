@@ -1,0 +1,18 @@
+[Unit]
+Description=DonerSearch Web UI
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/opt/doner
+ExecStart=/usr/bin/python3 -m donersearch --db /opt/doner/donersearch.db \
+  serve --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+User=www-data
+# AI settings (uncomment and set your real key/model)
+# Environment=MISTRAL_API_KEY=YOUR_MISTRAL_API_KEY
+# Environment=MISTRAL_MODEL=mistral-small-latest
+
+[Install]
+WantedBy=multi-user.target

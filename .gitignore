@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Databases
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Data Storage
+data/images/*
+!data/images/.gitkeep
+data/models/*
+!data/models/.gitkeep
+data/datasets/*
+!data/datasets/.gitkeep
+
+# OS generated files
+.DS_Store
+Thumbs.db
